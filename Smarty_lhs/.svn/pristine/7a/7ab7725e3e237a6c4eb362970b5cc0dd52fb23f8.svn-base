@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.lhs.dao.BoardDao">
+		<!-- resultType은 반드시 있어야 함 -->
+		<select id="list" parameterType="HashMap" resultType="HashMap">
+		SELECT board_seq AS boardSeq, 
+			   type_seq AS typeSeq,
+			   member_idx AS memberIdx,
+			   member_id AS memberId, 
+			   member_nick AS memberNick,
+			   title,
+			   hits, 
+			   has_file AS hasFile,
+			   date_format(create_date, '%Y-%m-%d %H:%i:%s') AS createDate
+		  FROM board
+		 WHERE 1=1
+		    AND type_seq = #{typeSeq}
+		<if test="search != null and search != ''">
+			AND ( title LIKE CONCAT('%', #{search}, '%') OR content LIKE CONCAT('%', #{search}, '%') )
+		</if>
+		<if test="(searchType != null and searchType == 'title') and searchText != ''">
+			AND title LIKE CONCAT('%', #{searchText}, '%')
+		</if>
+		<if test="(searchType != null and searchType == 'content') and searchText != ''">
+			AND content LIKE CONCAT('%', #{searchText}, '%')
+		</if>
+		<if test="sidx != null and sidx != '' and sord != null and sord != ''">
+		ORDER BY ${sidx} ${sord}
+		</if>
+		<if test="start != null and start != '' and rows != null and rows != ''">
+		LIMIT ${start}, ${rows}
+		</if>	
+		</select>
+		
+		
+		
+		<select id="getTotalArticleCnt" parameterType="HashMap" resultType="int">
+		SELECT COUNT(board_seq)
+		  FROM board
+		 WHERE 1=1
+		    AND type_seq = #{typeSeq}
+		<if test="search != null and search != ''">
+			AND ( title LIKE CONCAT('%', #{search}, '%') OR content LIKE CONCAT('%', #{search}, '%') )
+		</if>
+		<if test="(searchType != null and searchType == 'title') and searchText != ''">
+			AND title LIKE CONCAT('%', #{searchText}, '%')
+		</if>
+		<if test="(searchType != null and searchType == 'content') and searchText != ''">
+			AND content LIKE CONCAT('%', #{searchText}, '%')
+		</if>
+		</select>
+		
+	
+		<insert id ="write" parameterType="HashMap" useGeneratedKeys="true" keyProperty="boardSeq" >
+													<!--AI 키를 key 이름으로 params에 값 넣어주는 작업.-->
+			INSERT INTO board(type_seq , member_idx, member_id, member_nick, title, content, create_date, has_file)
+			VALUES (#{typeSeq} , #{memberIdx}, #{memberId} , #{memberNick} , #{title} , #{content} , NOW(), #{hasFile})
+		</insert>
+		
+		<select id="read" parameterType="HashMap" resultType = "HashMap">
+			SELECT * FROM board WHERE type_seq = #{typeSeq} AND board_seq = #{boardSeq}
+		</select>
+
+		<update id="updateHits" parameterType="HashMap" >
+			UPDATE board SET hits = hits + 1 WHERE type_seq = #{typeSeq} AND board_seq = #{boardSeq} 
+		</update>
+
+
+		<update id="update" parameterType="HashMap">
+			UPDATE board SET title = #{title} , content = #{content} , has_file = #{hasFile} , update_date = NOW() WHERE type_seq = #{typeSeq} AND board_seq = #{boardSeq}
+		</update>
+		
+		<update id="updateHasFileToZero" parameterType="HashMap" >
+		 	UPDATE board SET has_file = 'N' WHERE type_seq = #{typeSeq} AND board_seq = #{boardSeq} 
+		 </update>
+		
+		<delete id="delete" parameterType="HashMap">
+			DELETE FROM board WHERE type_seq = #{typeSeq} AND board_seq = #{boardSeq}
+		</delete>
+
+
+</mapper>
