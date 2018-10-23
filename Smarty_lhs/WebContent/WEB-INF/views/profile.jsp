@@ -31,9 +31,12 @@
 								<h1>HYE SUE LEE</h1>
 							</div>
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi voluptates placeat ducimus delectus magnam tempore dolore dolorem quisquam porro modi voluptatum eum saepe dolorum.</p>
+							<p>반갑습니다. 신입 웹 개발자 이혜수 입니다. <br/>
+							새로운 기술에 호기심이 많고 배우고 탐구하는 과정을 즐깁니다.<br/>
+							웹에서 동작하는 어플리케션을 다루며 백엔드 개발자로 성장하고자 부단히 노력하고 있습니다. 당신과 함께 일하는 날을 고대합니다. <br/>
+							천천히 둘러보시고, 오늘도 좋은 하루 되세요!  :)  </p>
 							<blockquote>
-								<p>Are you looking for a CREATIVE web developer? then, PICK ME!</p>
+								<p>Are you looking for a CREATIVE web developer? <br/>then, PICK ME!</p>
 								<cite>Let's work together !  Thanks.</cite>
 							</blockquote>
 
@@ -57,30 +60,37 @@
 						<div class="col-lg-6 col-md-6 col-sm-6">
 
 							<div class="heading-title heading-border-bottom">
-								<h3>Development Experience</h3>
+								<h3>Contact Me</h3>
 							</div>
 
 							<ul class="nav nav-tabs nav-clean">
-								<li class="active"><a href="#tab1" data-toggle="tab">JAVA</a></li>
-		
-								<li><a href="#tab2" data-toggle="tab">Other Languages</a></li>
+								<li class="active"><a href="#tab1" data-toggle="tab">I'm available Anytime !</a></li>
 							</ul>
 
-							<div class="tab-content">
+							<div class="tab-content" style="padding:30px 10px 10px 20px">
 								<div id="tab1" class="tab-pane active">
-									<img class="float-left" src="resources/images/coding.jpg" width="200" alt="" />
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quidem.<p>
-									<p>Officia illum eos quos voluptate omnis deleniti molestiae numquam fugiat ab.</p>
+									
+									
+									<!-- Contact Address -->
+							<address>
+								<ul class="list-unstyled">
+									<li style="margin-bottom:20px">
+									<i class ="fa fa-map-marker"></i>
+									SEOUL, SOUTH KOREA
+									</li>
+									<li style="margin-bottom:20px">
+									<i class="fa fa-phone"></i>
+										010-8393-4442
+									</li>
+									<li style="margin-bottom:20px">
+									<i class="fa fa-envelope"></i>
+										<a href="mailto:hyesue12@gmail.com">hyesue12@gmail.com</a>
+									</li>
+								</ul>
+							</address>
+							<!-- /Contact Address -->
 								</div>
-								<div id="tab2" class="tab-pane fade">
-									<img class="pull-right" src="resources/images/coding.jpg" width="200" alt="" />
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit voluptatem accusantium.<p>
-									<p>Officia illum eos quos voluptate omnis deleniti molestiae numquam fugiat delectus.</p>
-								</div>
-								<div id="tab3" class="tab-pane fade">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quidem voluptatem accusantium praesentium inventore quae illum.<p>
-									<p>Officia illum eos quos voluptate omnis deleniti molestiae numquam fugiat delectus aliquam ab.</p>
-								</div>
+								
 							</div>
 
 						</div>
@@ -88,30 +98,30 @@
 						<div class="col-lg-6 col-md-6 col-sm-6">
 
 							<div class="heading-title heading-border-bottom">
-								<h3>Skills</h3>
+								<h3>Development Skills</h3>
 							</div>
 
 							<div class="progress progress-lg"><!-- progress bar -->
 								<div class="progress-bar progress-bar-warning progress-bar-striped active text-left" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%; min-width: 2em;">
-									<span>JAVA 90%</span>
+									<span><b>JAVA/JSP 90%</b></span>
 								</div>
 							</div><!-- /progress bar -->
 
 							<div class="progress progress-lg"><!-- progress bar -->
 								<div class="progress-bar progress-bar-danger progress-bar-striped active text-left" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%; min-width: 2em;">
-									<span>HTML/JSP 70%</span>
+									<span><b>HTML/CSS/Bootstrap 70%</b></span>
 								</div>
 							</div><!-- /progress bar -->
 
 							<div class="progress progress-lg"><!-- progress bar -->
 								<div class="progress-bar progress-bar-success progress-bar-striped active text-left" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; min-width: 2em;">
-									<span>JAVASCRIPT 50%</span>
+									<span><b>JavaScript/jQuery 50%</b></span>
 								</div>
 							</div><!-- /progress bar -->
 
 							<div class="progress progress-lg"><!-- progress bar -->
 								<div class="progress-bar progress-bar-info progress-bar-striped active text-left" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
-									<span>MYSQL 80%</span>
+									<span><b>MYSQL 80%</b><b></span>
 								</div>
 							</div><!-- /progress bar -->
 

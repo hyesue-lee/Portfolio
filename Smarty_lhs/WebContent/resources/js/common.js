@@ -37,7 +37,7 @@ function movePage(target, url, params){
          $('div#contentDiv').html(XMLHttpRequest.responseText);
       }
    });
-}
+}// movePage
 
 function movePageBack(target, url, params){
    if(console){
@@ -73,4 +73,12 @@ function movePageBack(target, url, params){
          $('div#contentDiv').html(XMLHttpRequest.responseText);
       }
    });
-}
+   
+ } // movePageBack
+
+
+
+
+
+
+

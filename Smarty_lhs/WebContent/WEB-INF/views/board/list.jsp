@@ -48,6 +48,13 @@
 			movePage(null, '/board/list.do', data); //data: searchType,Text params로 넘김.. 
 			
 		});//btnSearch
+		//엔터에 버튼 click먹이기 . 
+		$('#searchText').keypress(function(event){
+		     if ( event.which == 13 ) { //which속성 - Enter Key: 13 
+		         $('#btnSearch').click(); // 버튼클릭 수행. 
+		         return false;
+		     }
+		}); //keypress 
 	
 	});//ready
 

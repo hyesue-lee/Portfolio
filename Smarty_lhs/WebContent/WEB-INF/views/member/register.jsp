@@ -8,7 +8,9 @@
 $(document).ready(function(){
 	$('#msgDiv').hide();
 	$("#loading-div-background").css({ opacity: 1 });
+	
 	$('#btnSignUp').click(function(e){
+		//유효성 검사 
 		if( $('#memberId').val() == '' || $('#memberName').val() == '' || $('#pwAgain').val() == '' 
 				|| $('#memberNick').val() == '' || $('#memberPw').val() == '' || $('#email').val() == ''){
 			var msgTag = $('<strong>').text("모든 항목은 필수입니다.");
@@ -17,6 +19,16 @@ $(document).ready(function(){
 			return;
 		}
 		
+		// [0-9a-zA-Z] :number or english   이메일 형식 
+        var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{3,4}$/i;
+        var email = $('#email').val();
+        if(email.match(regExp) == null){
+        	var msgTag = $('<strong>').text("잘못된 이메일 형식입니다. \nex: sample@eamil.com");
+			$('#msgDiv').html(msgTag).show();
+     
+           $('#email').focus();
+           return;
+        }
 		// overlay 보이기
 		$("#loading-div-background").css({'z-index' : '9999'}).show();
 		
@@ -69,7 +81,15 @@ $(document).ready(function(){
 				$(tabId, myLayout.panes.center).html(XMLHttpRequest.responseText);
 			}
 		});
-	});
+	});//btnSignup
+	
+	//엔터에 버튼 click먹이기 . 
+	$('#email').keypress(function(event){
+	     if ( event.which == 13 ) { //which속성 - Enter Key: 13 
+	         $('#btnSignup').click(); // 버튼클릭 수행. 
+	         return false;
+	     }
+	}); //keypress 
 });
 </script>
 </head>
@@ -82,7 +102,7 @@ $(document).ready(function(){
 				<div id="msgDiv" class="alert alert-mini alert-danger mb-10"></div>
 				<!-- /ALERT -->
 					
-				<div class="box-static box-border-top p-30">
+				<div class="box-static box-border-top p-30" style="height:490px">
 					<div class="box-title mb-30">
 						<h2 class="fs-20">REGISTER</h2>
 					</div>
@@ -151,18 +171,14 @@ $(document).ready(function(){
 									</label>
 								</div>
 							</div>
-							<%--
-							<hr />
-							<label class="checkbox m-0"><input class="checked-agree" type="checkbox" name="checkbox"><i></i>I agree to the <a href="#" data-toggle="modal" data-target="#termsModal">Terms of Service</a></label>
-							<label class="checkbox m-0"><input type="checkbox" name="checkbox"><i></i>I want to receive news and  special offers</label>
-							 --%>
-						</fieldset>
-
-						<div class="row">
+							
+							<div class="row">
 							<div class="col-md-12 col-sm-12 col-12 text-right">
 								<button id="btnSignUp" type="button" class="btn btn-primary"><i class="fa fa-check"></i> REGISTER</button>
 							</div>
-						</div>
+							</div>
+							
+						</fieldset>
 
 					</form>
 				</div>

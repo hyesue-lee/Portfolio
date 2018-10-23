@@ -4,7 +4,9 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>HYESUE's Portfolio </title>
+	<link rel="shortcut icon" href="<c:url value='/resources/logo_favicon.ico'/>"/>
+	
+	<title>Hyesue's Portfolio </title>
 	<meta name="description" content="" />
 	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -119,11 +121,7 @@
 							<i class="fa fa-bars"></i>
 						</button>
 
-						<!-- Logo -->
-						<a class="logo float-left" href="<c:url value='/index.do'/>">
-							<img src="<c:url value=''/>" alt="" />
-						</a>
-						
+
 						
 						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 							<nav class="nav-main">
@@ -247,16 +245,15 @@
 								이 사이트는 아래 기술을 이용하여 구현하였습니다.
 								<br/>
 								<span style="font-size:20px;font-weight:400;line-height: 30px">
-								<ul>
-									<li>Spring Framework 4.3.14.RELEASE / myBatis 3.4.1 / jUnit 4.12</li>
-									<li>jQuery 3.2.1/ jQuery UI 1.12.1/ jqGrid 4.4.3 / Maven / log 4.12 </li>
-									<br/>
-									<li>Languages : JAVA, JSP, JavaScript</li>
-									<li>Server : AWS t2.micro free tier</li>
-									<li>DBMS : MySql 5.7</li>
-									<li>WAS : Tomcat 8.5</li>
+									Spring Framework 4.3.14.RELEASE / myBatis 3.4.1 / jUnit 4.12<br/>
+									jQuery 3.2.1/ jQuery UI 1.12.1/ jqGrid 4.4.3 / Maven / log 4.12
+									<br/><br/>
+									Languages : JAVA, JSP, JavaScript<br/>
+									Server : AWS t2.micro free tier<br/>
+									DBMS : MySql 5.7<br/>
+									WAS : Tomcat 8.5<br/>
 									
-								</ul>
+
 								</span>
 								
 							</div>
@@ -295,9 +292,11 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								data-endeasing="Power4.easeIn">
-								Happiness is an accident of nature,<br/>
-								a beautiful and flawless aberration.<br/>
-								<span style="font-size:24px;font-weight:400;">&ndash; Hyesue Lee</span>
+								The regret after not doing something</br>
+								is bigger than that of doing something.<br/>
+								so, Just do it!</br>
+
+								<span style="font-size:24px;font-weight:400;margin-left:350px" >&ndash; Hyesue Lee</span>
 							</div>
 
 						</li>
@@ -416,7 +415,7 @@
 					</li>
 				
 					<li class="list-group-item">
-						<a href="javascript:movePage(this, '/tables.do')">
+						<a href="javascript:movePage(this, '/devNotes.do')">
 							<i class="ico-category et-happy"></i>  
 							DEV-NOTES
 						</a>

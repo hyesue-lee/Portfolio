@@ -126,7 +126,7 @@ public class MemberController {
 				System.out.println("wtf? startidx: "+startIndex);
 				
 				//go to DB 
-				params.put("startIndex", startIndex);
+				params.put("start", startIndex);
 				
 				//모든 회원 셀렉
 				List<HashMap<String,Object>> memberList = new ArrayList<HashMap<String,Object>>();

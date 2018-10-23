@@ -23,18 +23,19 @@
 									<i class="b-0 fa fa-database"></i>
 									<h2>ERD</h2>
 								</div>
-									<p> DB Modeling (IMG)</p>
-							
-									<button type="button" class="btn btn-default btn-lg lightbox" data-toggle="modal" data-target="#modalERD" style="width:70%;">
-										ERD
-									</button>
-									<p>Download ERD (MWB)</p>
-									<a href="<c:url value='/file/downloadERD.do'/>">
-										<button type="button" class="btn btn-default btn-lg lightbox" data-toggle="modal" style="width:70%">
-											Download
-										</button>
-									</a>	
-								<br/>	
+								
+<a data-toggle="modal" data-target="#modalERD" style="width:90%; opacity:0.5;margin-bottom:40px" 
+class="btn btn-featured btn-inverse btn-round btn-default">
+	<span>DB Modeling</span>
+	<i class="fa fa-eye"></i>
+</a>
+
+<a href="<c:url value='/file/downloadERD.do'/>" style="width:90%; opacity:0.5;" 
+class="btn btn-featured btn-inverse btn-round btn-default">
+	<span>Download MWB</span>
+	<i class="fa fa-download"></i>
+</a>
+
 							</div>
 
 						</div>
@@ -44,25 +45,30 @@
 							<div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
 								<div class="box-icon-title">
 									<i class="b-0 fa fa-file-code-o"></i>
-									<h2>Clean Design</h2>
+									<h2 style="margin-bottom:10px">Today I Learned.</h2>
 								</div>
-								<p>nteger posuere erat a ante venenatis dapibus posuere</p>
+								<div class="box-icon-content">
+								
+								<a href="http://cheershennah.tistory.com" target="_blank" opacity="0.8"
+								onmouseover="this.style.opacity='0.2'" 
+								onmouseout="this.style.opacity='0.8'" >
+								<img src="<c:url value='/resources/images/tistory.png'/>" style="width:20%;margin-bottom:10px"/>
+										
+								</a><p style="font-size:13px; margin:0 0 15px 0;">기록이 모여 기술이 됩니다.</p>	
+						
+								
+								<a href="https://github.com/hyesue-lee" target="_blank"
+								onmouseover="this.style.opacity='0.2'" 
+								onmouseout="this.style.opacity='1'">
+								<img src="<c:url value='/resources/images/github.png'/>" style="width:25%;"/>						
+								</a>
+								<p style="font-size:13px; margin:0;">새로운 기술을 끊임없이 탐구합니다.</p>	
+								</div>
+								
 							</div>
 
 						</div>
-<!--  
-						<div class="col-md-3">
 
-							<div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
-								<div class="box-icon-title">
-									<i class="b-0 fa fa-tint"></i>
-									<h2>Reusable Elements</h2>
-								</div>
-								<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
-							</div>
-
-						</div>
--->
 						<div class="col-md-4">
 
 							<div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content">
@@ -73,7 +79,9 @@
 								
 								<div style="padding-bottom:20px">
 								<a data-toggle="modal" data-target="#modalDevTool">
-								<img src="<c:url value='/resources/images/dev-tools.jpeg'/>" style="width:80%;"/>
+								<img src="<c:url value='/resources/images/dev-tools.png'/>" style="width:80%; opacity:0.7;"
+								onmouseover="this.style.opacity='1'" 
+								onmouseout="this.style.opacity='0.7'" />
 														
 								</a>
 								</div>
@@ -125,9 +133,10 @@
 								</div>
 
 								<!-- Modal Body -->
+								
 								<div class="modal-body">
 									
-									<img id="toolImg" width="100%" src="<c:url value='/resources/images/dev-tools.jpeg'/>"/>
+									<img id="toolImg" width="100%" src="<c:url value='/resources/images/dev-tools.png'/>"/>
 									
 									
 								</div>

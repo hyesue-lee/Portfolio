@@ -144,14 +144,7 @@ $(document).ready(function(){
 								
 									
 							<!-- 컬렉션 형태에서는 (list) items  -->
-							
-							<!-- 첨붚파일없으면  -->
-										<c:if test="${empty attFiles}"> 
-											<tr>
-												<th class="tright" >#첨부파일 ${ vs.count }</th>
-												<td colspan="6" class="tright"> </td> <!-- 걍빈칸  -->
-											</tr>
-										</c:if>
+
 										
 						<!-- 파일있으면  -->				
 										<c:forEach items="${attFiles}" var="file" varStatus ="f" > 

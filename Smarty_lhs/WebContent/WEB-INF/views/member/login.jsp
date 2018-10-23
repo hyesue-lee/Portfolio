@@ -10,7 +10,7 @@
 		$("#loading-div-background").css({ opacity: 1 });
 		
 		$('#btnLogin').click(function(){
-			console.log('123');
+			
 			if( $('#memberId').val() == '' || $('#memberPw').val() == '' ){
 				var msgTag = $('<strong>').text("모든 항목은 필수입니다.");
 				console.log(msgTag);
@@ -50,8 +50,25 @@
 					console.log(errorThrown);
 				}
 			});
-		});
-	});
+		
+		
+		
+		});// btnLogin click 
+	
+		//엔터에 버튼 click먹이기 . 
+		$('#memberPw').keypress(function(event){
+		     if ( event.which == 13 ) { //which속성 - Enter Key: 13 
+		         $('#btnLogin').click(); // 버튼클릭 수행. 
+		         return false;
+		     }
+		}); //keypress 
+
+		
+	});// ready 
+	
+	
+	
+	
 </script>
 </head>
 <body>
@@ -70,6 +87,8 @@
 					<div class="box-static box-border-top p-30">
 						<div class="box-title mb-30">
 							<h2 class="fs-20">LOGIN</h2>
+							* 관리자 테스트 계정 ID: admin123 / PW: admin12# 
+							<br/>
 						</div>
 	
 						<form class="m-0" method="post" name="loginForm" autocomplete="off">
