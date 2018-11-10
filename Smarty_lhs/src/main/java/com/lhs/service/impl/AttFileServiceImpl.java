@@ -28,15 +28,6 @@ public class AttFileServiceImpl implements AttFileService{
 		return attFileDao.readAttFileByPk(fileIdx);
 	}
 
-	
-	
-	
-
-	@Override
-	public int updateLinkedInfo() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 
 

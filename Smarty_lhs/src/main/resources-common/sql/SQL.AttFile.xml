@@ -29,23 +29,6 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	 	 SELECT * FROM board_attach
 	 	</select>
 	 	
-	 	
-	 	<update id="updateLinkedInfo" parameterType="int" >
-	 		UPDATE board_attach 
-	 		SET linked = 0 
-	 		WHERE file_idx = #{fileIdx}
-	 	</update>
-	 	
-	 	<update id="updateLinkedInfos" parameterType="List" >
-	 		UPDATE board_attach 
-	 		SET linked = 0 
-	 		WHERE file_idx IN <!-- 여러개이면 =대신 WHERE column IN(1,3,2...)  -->
-	 		<!-- foreach: 파라미터 타입이 컬렉션이면 컬렉션타입을, 맵이면 컬렌션의 key를 적어야함..  -->
-	 		<!--JSP:     items               var -->
-	 		<foreach collection="list" item="fileIdx" open="(" close=")" separator=",">
-	 			#{fileIdx}
-	 		</foreach>
-	 	</update>
-		
+
 		
 	</mapper>

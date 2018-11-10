@@ -24,21 +24,44 @@
 									<h2>ERD</h2>
 								</div>
 								
-<a data-toggle="modal" data-target="#modalERD" style="width:90%; opacity:0.5;margin-bottom:40px" 
-class="btn btn-featured btn-inverse btn-round btn-default">
-	<span>DB Modeling</span>
-	<i class="fa fa-eye"></i>
-</a>
-
-<a href="<c:url value='/file/downloadERD.do'/>" style="width:90%; opacity:0.5;" 
-class="btn btn-featured btn-inverse btn-round btn-default">
-	<span>Download MWB</span>
-	<i class="fa fa-download"></i>
-</a>
+								<a data-toggle="modal" data-target="#modalERD" style="width:90%; opacity:0.5;margin-bottom:40px" 
+								class="btn btn-featured btn-inverse btn-round btn-default">
+									<span>DB Modeling</span>
+									<i class="fa fa-eye"></i>
+								</a>
+								
+								<a href="<c:url value='/file/downloadERD.do'/>" style="width:90%; opacity:0.5;" 
+								class="btn btn-featured btn-inverse btn-round btn-default">
+									<span>Download MWB</span>
+									<i class="fa fa-download"></i>
+								</a>
 
 							</div>
 
 						</div>
+						<!--  
+						
+						<div class="col-md-3">
+
+							<div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content" align="center">
+								<div class="box-icon-title">
+									<i class="b-0 fa fa-database"></i>
+									<h2>ERD</h2>
+								</div>
+								
+							
+								
+								<a href="<c:url value='/file/downloadERD.do'/>" style="width:90%; opacity:0.5;" 
+								class="btn btn-featured btn-inverse btn-round btn-default">
+									<span>Download MWB</span>
+									<i class="fa fa-download"></i>
+								</a>
+
+							</div>
+
+						</div>
+						
+						-->
 
 						<div class="col-md-4">
 
@@ -52,7 +75,7 @@ class="btn btn-featured btn-inverse btn-round btn-default">
 								<a href="http://cheershennah.tistory.com" target="_blank" opacity="0.8"
 								onmouseover="this.style.opacity='0.2'" 
 								onmouseout="this.style.opacity='0.8'" >
-								<img src="<c:url value='/resources/images/tistory.png'/>" style="width:20%;margin-bottom:10px"/>
+								<img src="<c:url value='/resources/images/tistory.svg'/>" style="width:15%;margin-bottom:10px"/>
 										
 								</a><p style="font-size:13px; margin:0 0 15px 0;">기록이 모여 기술이 됩니다.</p>	
 						
@@ -79,7 +102,7 @@ class="btn btn-featured btn-inverse btn-round btn-default">
 								
 								<div style="padding-bottom:20px">
 								<a data-toggle="modal" data-target="#modalDevTool">
-								<img src="<c:url value='/resources/images/dev-tools.png'/>" style="width:80%; opacity:0.7;"
+								<img src="<c:url value='/resources/images/dev-tools.png'/>" style="width:80%; opacity:0.5;"
 								onmouseover="this.style.opacity='1'" 
 								onmouseout="this.style.opacity='0.7'" />
 														

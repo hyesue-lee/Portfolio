@@ -18,12 +18,7 @@ public interface AttFileService {
 	 */
 	public HashMap<String, Object> readAttFileByPk(int fileIdx);
 	
-	
-	//첨부파일 테이블에 있는 정복와 물리적 파일간 연결끊긴 데이터 찾아서 특정클럼(linked)에 표시(update)하라.
 
-		 /* 파일 없으면 컬럼 linked 값 수정 1건. 
-		 */
-		public int updateLinkedInfo();
 		
 
 

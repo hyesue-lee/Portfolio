@@ -10,12 +10,12 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- 루트 어플리케이션컨텍스트 영역 -->
-	<!-- 시작점을 의미 한다 -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:/applicationContext*.xml</param-value>
-	</context-param>
+		<!-- 루트 어플리케이션컨텍스트 영역 -->
+		<!-- 시작점을 의미 한다 -->
+		<context-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:/applicationContext*.xml</param-value>
+		</context-param>
 	<!-- Spring configuration end -->
 
 	<!-- 한글 처리를 위한 필터 설정 -->

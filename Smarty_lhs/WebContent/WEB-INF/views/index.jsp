@@ -97,7 +97,7 @@
 	                    	<c:when test='${sessionScope.memberId != null}'>
 	                    	<%-- 로그인 사용자 정보 --%>
 	                    	
-								<li class="text-welcome hidden-xs-down">Welcome!! <strong>${sessionScope.memberNick}</strong></li>
+								<li class="text-welcome hidden-xs-down">Welcome!!  <strong>${sessionScope.memberNick} :)</strong></li>
 								<li><a tabindex="-1" href="<c:url value='/member/logout.do'/>"><i class="glyphicon glyphicon-off"></i> LOGOUT</a></li>
 	                    	</c:when>
 	                    	<c:otherwise>
@@ -391,7 +391,7 @@
 
 					<li class="list-group-item">
 						<a href="<c:url value='/index.do'/>">
-							<i class="ico-category et-heart"></i>  
+					<i class="ico-category et-heart"></i>  
 							HOME
 						</a>
 					</li>

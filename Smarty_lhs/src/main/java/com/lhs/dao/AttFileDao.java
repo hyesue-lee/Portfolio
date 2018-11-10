@@ -1,6 +1,6 @@
 package com.lhs.dao;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -48,16 +48,5 @@ public interface AttFileDao {
 	 */
 	public List<HashMap<String, Object>> readAllAttFiles();
 
-	/**
-	 * 파일 없으면 컬럼 linked 값 수정 1건. 
-	public int updateLinkedInfo(int fileIdx);
-	*/
-	
-	/**
-	 * 파일 없으면 컬럼 linked 값 수정 여러건. 
-	 */
-	public int updateLinkedInfos(ArrayList<Integer> fileIdxs);
-	
-	
 	
 }
